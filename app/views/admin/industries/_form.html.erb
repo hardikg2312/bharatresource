@@ -1,0 +1,14 @@
+<div>
+  Add New industry
+  <table>
+    <tr>
+      <td><label>industry Name</label></td>
+      <td><%= f.text_field :name, :required => true, :class => "" %></td>
+    </tr>
+  </table>
+</div>
+
+<%= f.submit "Save", :class => "" %>
+<%= link_to admin_industries_path do %>
+  <span class ="">Cancel</span>
+<% end %>

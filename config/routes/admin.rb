@@ -4,5 +4,6 @@ Bharatresource::Application.routes.draw do
   namespace :admin do
     resources :states
     resources :regions
+    resources :industries
   end
 end
