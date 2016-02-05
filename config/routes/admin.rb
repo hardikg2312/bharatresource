@@ -5,5 +5,6 @@ Bharatresource::Application.routes.draw do
     resources :states
     resources :regions
     resources :industries
+    resources :sub_industries
   end
 end

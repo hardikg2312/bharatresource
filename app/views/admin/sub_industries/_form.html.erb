@@ -1,0 +1,18 @@
+<div>
+  Add New Sub industry
+  <table>
+    <tr>
+      <td><label>sub industry Name</label></td>
+      <td><%= f.text_field :name, :required => true, :class => "" %></td>
+    </tr>
+    <tr>
+      <td><label>Select industry</label></td>
+      <td><%= f.collection_select :industry_id, Industry.all , :id, :name, {}, {:class => "", :style => ""}%></td>
+    </tr>
+  </table>
+</div>
+
+<%= f.submit "Save", :class => "" %>
+<%= link_to admin_sub_industries_path do %>
+  <span class ="">Cancel</span>
+<% end %>
