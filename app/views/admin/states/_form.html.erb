@@ -1,0 +1,19 @@
+<div>
+
+  Add New State
+  <table>
+    <tr>
+      <td><label>State Name</label></td>
+      <td><%= f.text_field :name, :required => true, :class => "" %></td>
+    </tr>
+    <tr>
+      <td><label>Stare Attr</label></td>
+      <td><%= f.text_field :name_attr, :required => true, :class => "" %></td>
+    </tr>
+  </table>
+</div>
+
+<%= f.submit "Save", :class => "" %>
+<%= link_to admin_states_path do %>
+  <span class ="">Cancel</span>
+<% end %>

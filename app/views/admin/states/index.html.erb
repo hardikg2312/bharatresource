@@ -1,0 +1,19 @@
+<table class="font12 table-td-border" cellspacing="0">
+  <tr>
+    <th>Id</th><th>Name</th><th>Name Attr</th>
+  </tr>
+  <% @states.each do |s| %>
+    <tr>
+      <td><%= s.id %></td>
+      <td><%= s.name %></td>
+      <td><%= s.name_attr %></td>
+      <td class="pad10 white font9">
+        <%= link_to "edit" , edit_admin_state_path(s), :class => "" %>
+        <%= link_to 'Destroy', admin_state_path(s), :class => "",
+                  method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Add New State', new_admin_state_path %>
