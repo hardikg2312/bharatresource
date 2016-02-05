@@ -1,0 +1,18 @@
+<div>
+  Add New region
+  <table>
+    <tr>
+      <td><label>Region Name</label></td>
+      <td><%= f.text_field :name, :required => true, :class => "" %></td>
+    </tr>
+    <tr>
+      <td><label>Select State Of Region</label></td>
+      <td><%= f.collection_select :state_id, State.all , :id, :name, {}, {:class => "", :style => ""}%></td>
+    </tr>
+  </table>
+</div>
+
+<%= f.submit "Save", :class => "" %>
+<%= link_to admin_regions_path do %>
+  <span class ="">Cancel</span>
+<% end %>
