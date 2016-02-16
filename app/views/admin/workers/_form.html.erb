@@ -1,0 +1,152 @@
+<div>
+  Add New industry
+  <table>
+    <tr>
+      <td><label>Name</label></td>
+      <td><%= f.text_field :name, :required => true, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>Select State</label></td>
+      <td><%= f.collection_select :state_id, State.all , :id, :name, {}, {:class => "", :style => ""}%></td>
+    </tr>
+
+    <tr>
+      <td><label>Select Region</label></td>
+      <td><%= f.collection_select :region_id, Region.all , :id, :name, {}, {:class => "", :style => ""}%></td>
+    </tr>
+
+    <tr>
+      <td><label>Select Industry</label></td>
+      <td><%= f.collection_select :industry_id, Industry.all , :id, :name, {}, {:class => "", :style => ""}%></td>
+    </tr>
+
+    <tr>
+      <td><label>Select Sub Industry</label></td>
+      <td><%= f.collection_select :sub_industry_id, SubIndustry.all , :id, :name, {}, {:class => "", :style => ""}%></td>
+    </tr>
+
+    <tr>
+      <td>Date Of Birth</td>
+      <td>
+        <%= f.date_select :dob, {order: [:day, :month, :year],  start_year: Date.today.year - 100, end_year: Date.today.year - 8, default: -18.years.from_now}, {:class => 'textbox', required: true, :style => 'width:100px;height:32px;'} %>
+      </td>
+    </tr>
+
+    <tr>
+      <td><label>Gender</label></td>
+      <td><%= f.select :gender, [['Male', 'male'], ['Female', 'female']] %></td>
+    </tr>
+
+    <tr>
+      <td><label>Address</label></td>
+      <td><%= f.text_area :address, :rows => 4, :cols => 100, :class => '' %></td>
+    </tr>
+
+    <tr>
+      <td><label>Email</label></td>
+      <td><%= f.text_field :email, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>Mobile No</label></td>
+      <td><%= f.text_field :mobile_no, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>Proof docs</label></td>
+      <td><%= f.select :proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']] %></td>
+    </tr>
+
+    <tr>
+      <td><label>languages</label></td>
+      <td><%= f.select(:languages, [['Hindi', 'Hindi'],
+                                  ['Marathi', 'Marathi'],
+                                  ['English', 'English']
+                                 ],{ :prompt => "Please select"},
+                                   { :multiple => true, :size => 3 }
+                                 ) %></td>
+    </tr>
+
+    <tr>
+      <td><label>education</label></td>
+      <td><%= f.text_field :education, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>special_course</label></td>
+      <td><%= f.text_field :special_course, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>college & addrs</label></td>
+      <td><%= f.text_area :college, :rows => 4, :cols => 100, :class => '' %></td>
+    </tr>
+
+    <tr>
+      <td><label>Address Proof docs</label></td>
+      <td><%= f.select :address_proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']] %></td>
+    </tr>
+
+    <tr>
+      <td><label>skills</label></td>
+      <td><%= f.text_area :skills, :rows => 4, :cols => 100, :class => '' %></td>
+    </tr>
+
+    <tr>
+      <td><label>current_status</label></td>
+      <td><%= f.text_field :current_status, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>years_of_experience</label></td>
+      <td><%= f.text_field :years_of_experience, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>job_title</label></td>
+      <td><%= f.text_field :job_title, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>location_of_job</label></td>
+      <td><%= f.text_field :location_of_job, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>specialized_skill</label></td>
+      <td><%= f.text_field :specialized_skill, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>job_description</label></td>
+      <td><%= f.text_area :job_description, :rows => 4, :cols => 100, :class => '' %></td>
+    </tr>
+
+    <tr>
+      <td><label>member_of_any_labor_union</label></td>
+      <td><%= f.text_area :member_of_any_labor_union, :rows => 4, :cols => 100, :class => '' %></td>
+    </tr>
+
+    <tr>
+      <td><label>key_words</label></td>
+      <td><%= f.text_area :key_words, :rows => 4, :cols => 100, :class => '' %></td>
+    </tr>
+
+    <tr>
+      <td><label>previous_salary</label></td>
+      <td><%= f.text_field :previous_salary, :class => "" %></td>
+    </tr>
+
+    <tr>
+      <td><label>supervisors_reference</label></td>
+      <td><%= f.text_area :supervisors_reference, :rows => 4, :cols => 100, :class => '' %></td>
+    </tr>
+
+  </table>
+</div>
+
+<%= f.submit "Save", :class => "" %>
+<%= link_to admin_industries_path do %>
+  <span class ="">Cancel</span>
+<% end %>

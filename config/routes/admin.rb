@@ -6,5 +6,6 @@ Bharatresource::Application.routes.draw do
     resources :regions
     resources :industries
     resources :sub_industries
+    resources :workers
   end
 end

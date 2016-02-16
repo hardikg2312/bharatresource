@@ -4,5 +4,6 @@ class State < ActiveRecord::Base
 
   # Associations
   has_many :regions
+  has_many :workers
 
 end
