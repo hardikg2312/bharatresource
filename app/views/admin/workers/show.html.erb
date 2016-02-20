@@ -1,14 +1,33 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @worker.name %>
-</p>
-
-<p>
-  <strong>BRID:</strong>
-  <%= @worker.br_id %>
-</p>
-
-<%= link_to 'Edit', edit_admin_worker_path(@worker) %> |
-<%= link_to 'Back', admin_workers_path %>
+<div class="bg-white pad15 font25">
+  All Workers
+</div>
+<div class="pad15">
+  <div class="breadcrumb">
+    Home / All Workers
+  </div>
+  <div id="notice" class="alert alert-success"><%= notice %></div>
+  <div class="panel panel-white">
+    <div class="panel-heading clearfix">
+      <div class="col-sm-12 col-md-12 col-lg-12 pad0 panel-title">
+        Listing Workers
+      </div>
+     
+    </div>
+    <div class="panel-body clearfix">
+      <div class="alert alert-block alert-success fade in">
+        <div class="gb10">
+          <strong>Name:</strong>
+          <%= @worker.name %>
+        </div>
+        <div class="gb10">
+          <strong>BRID:</strong>
+          <%= @worker.br_id %>
+        </div>
+        <div class="form-group">
+          <%= link_to 'Edit', edit_admin_worker_path(@worker), :class=>"btn btn-warning gutter-right10" %> 
+          <%= link_to 'Back', admin_workers_path, :class=>"btn btn-default" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

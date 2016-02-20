@@ -1,19 +1,48 @@
-<table class="font12 table-td-border" cellspacing="0">
-  <tr>
-    <th>Id</th><th>Name</th><th>Name Attr</th>
-  </tr>
-  <% @states.each do |s| %>
-    <tr>
-      <td><%= s.id %></td>
-      <td><%= s.name %></td>
-      <td><%= s.name_attr %></td>
-      <td class="pad10 white font9">
-        <%= link_to "edit" , edit_admin_state_path(s), :class => "" %>
-        <%= link_to 'Destroy', admin_state_path(s), :class => "",
-                  method: :delete, data: { confirm: 'Are you sure?' } %>
-      </td>
-    </tr>
-  <% end %>
-</table>
+<div class="bg-white pad15 font25">
+  All States
+</div>
+<div class="pad15">
+  <div class="breadcrumb">
+    Home / All States
+  </div>
+  <div id="notice" class="alert alert-success"><%= notice %></div>
+  <div class="panel panel-white">
+    <div class="panel-heading clearfix">
+      <div class="col-sm-6 col-md-6 col-lg-6 pad0 panel-title">
+        Listing States
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6 pad0 right">
+        <%= link_to '+ Add New State', new_admin_state_path, :class=>"btn btn-info" %>
+      </div>
+    </div>
 
-<%= link_to 'Add New State', new_admin_state_path %>
+    <div class="panel-body clearfix">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Name Attr</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @states.each do |s| %>
+              <tr>
+                <td><%= s.id %></td>
+                <td><%= s.name %></td>
+                <td><%= s.name_attr %></td>
+                <td>
+                  <%= link_to "edit" , edit_admin_state_path(s), :class => "label label-sm label-warning" %>
+                  <%= link_to 'Destroy', admin_state_path(s), :class => "label label-sm label-danger",
+                            method: :delete, data: { confirm: 'Are you sure?' } %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

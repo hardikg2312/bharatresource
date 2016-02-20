@@ -11,7 +11,127 @@
  * file per style scope.
  *
  *= require jquery-ui
- *= require bootstrap.min
+ *= require bootstrap.min2
  *= require bootstrap-responsive.min
  *= require_self
  */
+
+html,body{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #006990;
+  color: #333;
+}
+a, a:focus, a:active, a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.color-white{
+  color: #fff;  
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.pad0{
+  padding: 0;
+}
+.pad10{
+  padding: 10px;
+}
+.pad15{
+  padding: 15px;
+}
+.pad20{
+  padding: 20px;
+}
+.margin0{
+  margin: 0; 
+}
+.gutter-right10{
+  margin-right: 10px;
+}
+.gb10{
+  margin-bottom: 10px;
+}
+.gb20{
+  margin-bottom: 20px;
+}
+.font12{
+  font-size: 12px;
+}
+.font25{
+  font-size: 25px;
+}
+.center{
+  text-align: center;
+}
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
+}
+.bg-white{
+  background-color: #fff;
+}
+.breadcrumb{
+  font-size: 12px;
+  color: #fff;
+  background-color: unset;
+  padding: 0px;
+}
+.table thead tr {
+  color: #707070;
+}
+.table tbody tr {
+  color: #8b91a0;
+}
+.topbar{
+  background-color: #009ED8;
+}
+.nav > li > a:hover, .nav > li > a:focus{
+  background-color: #009ED8;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+  background-color: #009ED8;
+}
+ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
+  background-color: #1e2129;
+}
+#pageslide-left {
+  z-index: 1021;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 70px;
+  background-color: #22262f;
+  min-height: 100%;
+}
+#pageslide-left .user-profile{
+  height: 50px;
+  width: 50px;
+  border: 1px solid #2d323e;
+}
+#pageslide-left .main-navigation-menu{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#pageslide-left .main-navigation-menu li {
+  border-top: 1px solid #2d323e; 
+  padding: 10px 25px;
+}
+#pageslide-left .main-navigation-menu:last-child{
+  border-bottom: 1px solid #2d323e;
+}
+#pageslide-left .main-navigation-menu li:hover{
+  background-color: #31353F;
+}
+.page-contents{
+  margin-top: 50px;
+}

@@ -1,14 +1,33 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @sub_industry.name %>
-</p>
-
-<p>
-  <strong>Industry:</strong>
-  <%= @sub_industry.industry.name %>
-</p>
-
-<%= link_to 'Edit', edit_admin_sub_industry_path(@sub_industry) %> |
-<%= link_to 'Back', admin_sub_industries_path %>
+<div class="bg-white pad15 font25">
+  All Sub industry
+</div>
+<div class="pad15">
+  <div class="breadcrumb">
+    Home / All Sub industry
+  </div>
+  <div id="notice" class="alert alert-success"><%= notice %></div>
+  <div class="panel panel-white">
+    <div class="panel-heading clearfix">
+      <div class="col-sm-12 col-md-12 col-lg-12 pad0 panel-title">
+        Listing Sub industry
+      </div>
+     
+    </div>
+    <div class="panel-body clearfix">
+      <div class="alert alert-block alert-success fade in">
+        <div class="gb10">
+          <strong>Name:</strong>
+          <%= @sub_industry.name %>
+        </div>
+        <div class="gb10">
+          <strong>Industry:</strong>
+          <%= @sub_industry.industry.name %>
+        </div>
+        <div class="form-group">
+          <%= link_to 'Edit', edit_admin_sub_industry_path(@sub_industry), :class=>"btn btn-warning gutter-right10" %> 
+          <%= link_to 'Back', admin_sub_industries_path, :class=>"btn btn-default" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

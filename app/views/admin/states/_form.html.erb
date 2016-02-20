@@ -1,19 +1,33 @@
-<div>
+<div class="bg-white pad15 font25">
+  All / Edit States
+</div>
+<div class="pad15">
+  <div class="breadcrumb">
+    Home / All States / Add New State
+  </div>
 
-  Add New State
-  <table>
-    <tr>
-      <td><label>State Name</label></td>
-      <td><%= f.text_field :name, :required => true, :class => "" %></td>
-    </tr>
-    <tr>
-      <td><label>Stare Attr</label></td>
-      <td><%= f.text_field :name_attr, :required => true, :class => "" %></td>
-    </tr>
-  </table>
+  <div class="panel panel-white">
+    <div class="panel-heading clearfix">
+      <div class="panel-title">
+        Add New State
+      </div>
+    </div>
+    <div class="panel-body clearfix">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <%= f.text_field :name, :required => true, :class => "form-control", :placeholder=>"State Name" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :name_attr, :required => true, :class => "form-control", :placeholder=>"Stare Attr" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Save", :class => "btn btn-primary" %>
+          <%= link_to admin_states_path do %>
+            <span class ="btn btn-warning">Cancel</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<%= f.submit "Save", :class => "" %>
-<%= link_to admin_states_path do %>
-  <span class ="">Cancel</span>
-<% end %>

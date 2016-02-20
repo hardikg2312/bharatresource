@@ -1,152 +1,147 @@
-<div>
-  Add New industry
-  <table>
-    <tr>
-      <td><label>Name</label></td>
-      <td><%= f.text_field :name, :required => true, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>Select State</label></td>
-      <td><%= f.collection_select :state_id, State.all , :id, :name, {}, {:class => "", :style => ""}%></td>
-    </tr>
-
-    <tr>
-      <td><label>Select Region</label></td>
-      <td><%= f.collection_select :region_id, Region.all , :id, :name, {}, {:class => "", :style => ""}%></td>
-    </tr>
-
-    <tr>
-      <td><label>Select Industry</label></td>
-      <td><%= f.collection_select :industry_id, Industry.all , :id, :name, {}, {:class => "", :style => ""}%></td>
-    </tr>
-
-    <tr>
-      <td><label>Select Sub Industry</label></td>
-      <td><%= f.collection_select :sub_industry_id, SubIndustry.all , :id, :name, {}, {:class => "", :style => ""}%></td>
-    </tr>
-
-    <tr>
-      <td>Date Of Birth</td>
-      <td>
-        <%= f.date_select :dob, {order: [:day, :month, :year],  start_year: Date.today.year - 100, end_year: Date.today.year - 8, default: -18.years.from_now}, {:class => 'textbox', required: true, :style => 'width:100px;height:32px;'} %>
-      </td>
-    </tr>
-
-    <tr>
-      <td><label>Gender</label></td>
-      <td><%= f.select :gender, [['Male', 'male'], ['Female', 'female']] %></td>
-    </tr>
-
-    <tr>
-      <td><label>Address</label></td>
-      <td><%= f.text_area :address, :rows => 4, :cols => 100, :class => '' %></td>
-    </tr>
-
-    <tr>
-      <td><label>Email</label></td>
-      <td><%= f.text_field :email, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>Mobile No</label></td>
-      <td><%= f.text_field :mobile_no, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>Proof docs</label></td>
-      <td><%= f.select :proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']] %></td>
-    </tr>
-
-    <tr>
-      <td><label>languages</label></td>
-      <td><%= f.select(:languages, [['Hindi', 'Hindi'],
-                                  ['Marathi', 'Marathi'],
-                                  ['English', 'English']
-                                 ],{ :prompt => "Please select"},
-                                   { :multiple => true, :size => 3 }
-                                 ) %></td>
-    </tr>
-
-    <tr>
-      <td><label>education</label></td>
-      <td><%= f.text_field :education, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>special_course</label></td>
-      <td><%= f.text_field :special_course, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>college & addrs</label></td>
-      <td><%= f.text_area :college, :rows => 4, :cols => 100, :class => '' %></td>
-    </tr>
-
-    <tr>
-      <td><label>Address Proof docs</label></td>
-      <td><%= f.select :address_proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']] %></td>
-    </tr>
-
-    <tr>
-      <td><label>skills</label></td>
-      <td><%= f.text_area :skills, :rows => 4, :cols => 100, :class => '' %></td>
-    </tr>
-
-    <tr>
-      <td><label>current_status</label></td>
-      <td><%= f.text_field :current_status, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>years_of_experience</label></td>
-      <td><%= f.text_field :years_of_experience, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>job_title</label></td>
-      <td><%= f.text_field :job_title, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>location_of_job</label></td>
-      <td><%= f.text_field :location_of_job, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>specialized_skill</label></td>
-      <td><%= f.text_field :specialized_skill, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>job_description</label></td>
-      <td><%= f.text_area :job_description, :rows => 4, :cols => 100, :class => '' %></td>
-    </tr>
-
-    <tr>
-      <td><label>member_of_any_labor_union</label></td>
-      <td><%= f.text_area :member_of_any_labor_union, :rows => 4, :cols => 100, :class => '' %></td>
-    </tr>
-
-    <tr>
-      <td><label>key_words</label></td>
-      <td><%= f.text_area :key_words, :rows => 4, :cols => 100, :class => '' %></td>
-    </tr>
-
-    <tr>
-      <td><label>previous_salary</label></td>
-      <td><%= f.text_field :previous_salary, :class => "" %></td>
-    </tr>
-
-    <tr>
-      <td><label>supervisors_reference</label></td>
-      <td><%= f.text_area :supervisors_reference, :rows => 4, :cols => 100, :class => '' %></td>
-    </tr>
-
-  </table>
+<div class="bg-white pad15 font25">
+  All Region
 </div>
+<div class="pad15">
+  <div class="breadcrumb">
+    Home / All Region / Add New Worker
+  </div>
 
-<%= f.submit "Save", :class => "" %>
-<%= link_to admin_industries_path do %>
-  <span class ="">Cancel</span>
-<% end %>
+  <div class="panel panel-white">
+    <div class="panel-heading clearfix">
+      <div class="panel-title">
+        Add New Worker
+      </div>
+    </div>
+    <div class="panel-body clearfix">
+      <div class="col-sm-12 col-md-12 col-lg-12 pad0">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">  
+            <label class="font12">Name</label>
+            <%= f.text_field :name, :required => true, :class => "form-control", :placeholder=>"Enter Name" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Select State</label>
+            <%= f.collection_select :state_id, State.all , :id, :name, {}, {:class => "form-control", :style => ""}%>
+          </div>
+          <div class="form-group">
+            <label class="font12">Select Region</label>
+            <%= f.collection_select :region_id, Region.all , :id, :name, {}, {:class => "form-control", :style => ""}%>
+          </div>
+          <div class="form-group">
+            <label class="font12">Select Industry</label>
+            <%= f.collection_select :industry_id, Industry.all , :id, :name, {}, {:class => "form-control", :style => ""}%>
+          </div>
+          <div class="form-group">
+            <label class="font12">Select Sub-Industry</label>
+            <%= f.collection_select :sub_industry_id, SubIndustry.all , :id, :name, {}, {:class => "form-control", :style => ""}%>
+          </div>
+          <div class="form-group clearfix">
+            <label class="font12">Date Of Birth</label>
+            <div>
+              <%= f.date_select :dob, {order: [:day, :month, :year],  start_year: Date.today.year - 100, end_year: Date.today.year - 8, default: -18.years.from_now}, {:class => 'form-control left gutter-right10', required: true, :style => 'width:100px;'} %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="font12">Select Gender</label>
+            <%= f.select :gender, [['Male', 'male'], ['Female', 'female']], {:class=>'form-control'} %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Address</label>
+            <%= f.text_area :address, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Address" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Email</label>
+            <%= f.text_field :email, :class => "form-control", :placeholder=>"Email" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Mobile Number</label>
+            <%= f.text_field :mobile_no, :class => "form-control", :placeholder=>"Mobile Number" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Proof docs</label>
+            <%= f.select :proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']], {:class=>'form-control'} %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Language</label>
+            <%= f.select(:languages, [['Hindi', 'Hindi'],
+                                    ['Marathi', 'Marathi'],
+                                    ['English', 'English']
+                                   ],{ :prompt => "Please select"},
+                                     { :multiple => true, :size => 3 }
+                                   ) %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Education</label>
+            <%= f.text_field :education, :class => "form-control", :placeholder=>"Education" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Special Couse</label>
+            <%= f.text_field :special_course, :class => "form-control", :placeholder=>"Special Couse" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">College Name & Address</label>
+            <%= f.text_area :college, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"College Name & Address" %>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group">
+            <label class="font12">Address Proof documents</label>
+            <%= f.select :address_proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']] %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Skills</label>
+            <%= f.text_field :skills, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Skills" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Current Status</label>
+            <%= f.text_field :current_status, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Current Status" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Year Of Experience</label>
+            <%= f.text_field :years_of_experience, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Year Of Experience" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Job Title</label>
+            <%= f.text_field :job_title, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Job Title" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Job Location</label>
+            <%= f.text_field :location_of_job, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Job Location" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Specialized Skills</label>
+            <%= f.text_field :specialized_skill, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Specialized Skills" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Job Description</label>
+            <%= f.text_area :job_description, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Job Description" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Member of any labor union </label>
+            <%= f.text_area :member_of_any_labor_union, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Member of any labor union" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Keywords</label>
+            <%= f.text_area :key_words, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Keywords" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Previous Salary</label>
+            <%= f.text_field :previous_salary, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Previous Salary" %>
+          </div>
+          <div class="form-group">
+            <label class="font12">Supervisors Reference</label>
+            <%= f.text_area :supervisors_reference, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Keywords" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="form-group">
+          <%= f.submit "Save", :class => "btn btn-primary" %>
+          <%= link_to admin_industries_path do %>
+            <span class ="btn btn-warning">Cancel</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
