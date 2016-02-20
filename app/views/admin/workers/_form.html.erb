@@ -43,7 +43,7 @@
           </div>
           <div class="form-group">
             <label class="font12">Select Gender</label>
-            <%= f.select :gender, [['Male', 'male'], ['Female', 'female']], {:class=>'form-control'} %>
+            <%= f.select :gender, [['Male', 'male'], ['Female', 'female']], {}, {:class=>'form-control'} %>
           </div>
           <div class="form-group">
             <label class="font12">Address</label>
@@ -59,7 +59,7 @@
           </div>
           <div class="form-group">
             <label class="font12">Proof docs</label>
-            <%= f.select :proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']], {:class=>'form-control'} %>
+            <%= f.select :proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']], {}, {:class=>'form-control'} %>
           </div>
           <div class="form-group">
             <label class="font12">Language</label>
@@ -67,7 +67,7 @@
                                     ['Marathi', 'Marathi'],
                                     ['English', 'English']
                                    ],{ :prompt => "Please select"},
-                                     { :multiple => true, :size => 3 }
+                                     { :multiple => true, :size => 3, :class=>'form-control'}
                                    ) %>
           </div>
           <div class="form-group">
@@ -86,7 +86,7 @@
         <div class="col-sm-12 col-md-6 col-lg-6">
           <div class="form-group">
             <label class="font12">Address Proof documents</label>
-            <%= f.select :address_proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']] %>
+            <%= f.select :address_proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']], {}, {:class=>'form-control'} %>
           </div>
           <div class="form-group">
             <label class="font12">Skills</label>

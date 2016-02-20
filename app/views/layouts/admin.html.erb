@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bharatresource</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="main-wrapper">
+    <header class="topbar navbar navbar-fixed-top">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="col-sm-9 col-md-10 col-lg-10">
+            <a href="#" class="navbar-brand">
+              Site Logo
+            </a>
+          </div>
+          <div class="col-sm-3 col-md-2 col-lg-2">
+            <ul class="nav navbar-right">
+              <li class="dropdown">
+                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                  <span class="username">Admin</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">
+                      My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Log Out
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="row  margin0">
+      <nav class="col-sm-4 col-md-3 col-lg-2 color-white pad0" id="pageslide-left">
+        <div class="row  margin0">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-4 col-md-4 col-lg-4 center">
+              <%= image_tag "avatar.jpg", :class=>"user-profile" %>
+            </div>
+            <div class="col-sm-8 col-md-8 col-lg-8">
+              <h5> Welcome </h5>
+              <h4> Admin </h4>
+            </div>
+          </div>
+        </div>
+        <div class="row  margin0">
+          <div class="col-sm-12 col-md-12 col-lg-12 pad0">
+            <ul class="main-navigation-menu">
+              <li>
+                <%= link_to "All States", admin_states_path %>
+              </li> 
+              <li>
+                <%= link_to "All Region", admin_regions_path %>
+              </li> 
+              <li>
+                <%= link_to "All Industry", admin_industries_path %>
+              </li>  
+              <li>
+                <%= link_to "All Sub Industry", admin_sub_industries_path %>
+              </li> 
+              <li>
+                <%= link_to "Workers", admin_workers_path %>
+              </li>            
+            </ul>
+          </div>
+        </div> 
+      </nav>
+      <div class="page-contents col-sm-8 col-md-9 col-lg-10 col-md-offset-3 col-lg-offset-2 pad0">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
