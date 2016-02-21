@@ -29,7 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano'
+gem 'capistrano', '~> 2.15', '>= 2.15.5'
 # gem 'capistrano-rails', group: :development
 
 # Use ActiveModel has_secure_password
