@@ -1,10 +1,23 @@
-<%= link_to "All States", admin_states_path %>
-<%= link_to "All Region", admin_regions_path %>
-<%= link_to "All Industry", admin_industries_path %>
-<%= link_to "All Sub Industry", admin_sub_industries_path %>
-<%= link_to "Workers", admin_workers_path %>
+<div class="bg-white pad15 font25">
+  DashBoard
+</div>
+<div class="pad15">
 
-<p>
-  <button class="btn btn-large btn-primary" type="button">Large button</button>
-  <button class="btn btn-large" type="button">Large button</button>
-</p>
+  <div id="notice" class="alert alert-success"><%= notice %></div>
+  <div class="panel panel-white">
+    <div class="panel-heading clearfix">
+      <div class="col-sm-6 col-md-6 col-lg-6 pad0 panel-title">
+        DashBoard
+      </div>
+    </div>
+    <div class="panel-body clearfix">
+      <div class="table-responsive">
+        States : <%= @state_count %><br>
+        Regions : <%= @region_count %><br>
+        Industry : <%= @industry_count %><br>
+        Sub Industry : <%= @sub_industry_count %><br>
+        Workers : <%= @worker_count %><br>
+      </div>
+    </div>
+  </div>
+</div>
