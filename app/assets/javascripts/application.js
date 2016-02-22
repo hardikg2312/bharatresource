@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
+$(document).ready(function(){
+  $("#mobile-menu").on("click",function(){
+    $(".mobile-slide-left").animate({"margin-left":"0px"});
+  });
+  $("#mobile-close-btn").on("click",function(){
+    $(".mobile-slide-left").animate({"margin-left":"-260px"});
+  });
+});

@@ -134,3 +134,32 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 .page-contents{
   margin-top: 50px;
 }
+
+
+
+
+/******* Responsive CSS *********/
+@media (max-width:500px){
+   #pageslide-left {
+    margin-left: -260px;
+    background-color: rgba(0,0,0,.97);
+    width: 60%;
+    z-index: 2;
+    position: absolute;
+  }
+  .mobile-menu{
+    background: url("<%= asset_path 'glyphicons-halflings-white.png' %>");
+    cursor: pointer;
+    color: #fff;
+  }
+  .mobile-close-btn{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+    top: 60px;
+  }
+}
+.profiler-results{
+  display: none;
+}
