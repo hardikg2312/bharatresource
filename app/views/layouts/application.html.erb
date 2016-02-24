@@ -6,13 +6,168 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <div class="main-wrapper">
-      <div class="row  margin0">
-        <div class="page-contents col-sm-8 col-md-9 col-lg-10 col-md-offset-3 col-lg-offset-2 pad0">
-          <%= yield %>
+  <body class="row main-page"> 
+    <div class="header" id="main-header">
+      <div class="container">
+        <div class="col-sm-3 col-md-4 col-lg-6 col-xl-5">
+          Logo
+        </div>
+        <div class="col-sm-9 col-md-8 col-lg-6 col-xl-6">
+          <ul class="right-menu">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Plans</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+          <button data-target="#login" data-toggle="modal" class="btn-signup-login">
+            Login / SignUp
+          </button>
         </div>
       </div>
     </div>
+    <div class="row main-banner">
+      <div class="main-banner-content">
+        <div class="font25 gb20">
+          Lorem Ipsum is simply dummy
+        </div>
+        <div class="">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor Sed bibendum varius euismod. Integer eget turpis sit amet lorem rutrum ullamcorper sed sed dui. vestibulum odio at elementum. Suspendisse et condimentum nibh
+        </div>
+      </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1" id="login" class="modal fade" style="display: none;">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">
+              ×</button>
+            <h4 id="myModalLabel" class="modal-title">
+              Sign in to your account
+            </h4>
+            <p class="margin0">
+              Please enter your name and password to log in.
+            </p>
+          </div>
+          <div class="modal-body">
+          <div class="box-login" style="display: block;">
+          
+          <form action="http://www.cliptheme.com/demo/rapido/index.html" class="form-login" novalidate="novalidate">
+            <div class="errorHandler alert alert-danger no-display">
+              You have some form errors. Please check below.
+            </div>
+            <fieldset>
+              <div class="form-group">
+                <input type="text" placeholder="Username" name="username" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="form-group form-actions">
+                  <input type="password" placeholder="Password" name="password" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="clearfix">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 pad0">
+                  <div class="form-group form-actions">
+                    <a href="#" class="forgot">
+                        I forgot my password
+                      </a>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 pad0">
+                  <div class="form-actions right">
+                    <button class="btn-signup-login" type="submit">
+                      Login
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="new-account">
+                Don't have an account?&nbsp;
+                <a class="" href="#" data-target="#signup" data-toggle="modal">
+                  Create an account
+                </a>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1" id="signup" class="modal fade" style="display: none;">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">
+              ×</button>
+            <h4 id="myModalLabel" class="modal-title">
+              Sign Up
+            </h4>
+            <p class="margin0">
+              Enter your personal details below: 
+            </p>
+          </div>
+          <div class="modal-body">
+          <div class="box-login" style="display: block;">
+          
+          <form action="http://www.cliptheme.com/demo/rapido/index.html" class="form-login" novalidate="novalidate">
+            <div class="errorHandler alert alert-danger no-display">
+              You have some form errors. Please check below.
+            </div>
+            <fieldset>
+              <div class="form-group">
+                <input type="text" placeholder="Full name" name="name" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email Id" name="email" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Mobile Number" name="mobile" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="City" name="city" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Username" name="username" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="form-group form-actions">
+                  <input type="password" placeholder="Password" name="password" class="form-control no-shadow no-border-radius">
+              </div>
+              <div class="clearfix">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 pad0">
+                  <div class="form-group form-actions">
+                    <a href="#" class="forgot">
+                        I forgot my password
+                      </a>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 pad0">
+                  <div class="form-actions right">
+                    <button class="btn-signup-login" type="submit">
+                      SignUp
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="new-account">
+                Already have an account?&nbsp;
+                <a class="" href="#" data-target="#login" data-toggle="modal">
+                  Login Now
+                </a>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= yield %>
   </body>
 </html>
