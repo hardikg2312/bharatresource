@@ -46,22 +46,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-<%= form_tag("/workers", method: "get") do %>
-  State : <%= select_tag :state_id, options_from_collection_for_select(State.all, :id, :name), {:class => "", :style => ""} %>
-
-  Region : <%= select_tag :region_id, options_from_collection_for_select(Region.all, :id, :name), {:class => "", :style => ""} %>
-
-  Region : <%= select_tag :industry_id, options_from_collection_for_select(Industry.all, :id, :name), {:class => "", :style => ""} %>
-
-  Region : <%= select_tag :sub_industry_id, options_from_collection_for_select(SubIndustry.all, :id, :name), {:class => "", :style => ""} %>
-
-  Years Of Experience : <%= select_tag :years_of_experience, options_for_select([['2-4 years', 1], ['4-6 years', 2], ['6-8 years', 3]]), {:class => "", :style => ""} %>
-
-  <%= submit_tag("Search") %>
-<% end %>

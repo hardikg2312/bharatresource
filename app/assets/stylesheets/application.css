@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require jquery-ui
+ *= require bg_images
  *= require bootstrap.min2
  *= require_self
  */
@@ -214,11 +215,6 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 }
 #main-header .right-menu li a:hover{
   color: #F3C500;
-}
-.main-banner{
-  background: url("<%= asset_path 'banner.jpg' %>");
-  background-color: #5BC2B0;
-  height: 350px;
 }
 .main-banner-content{
   padding: 100px 0px;
