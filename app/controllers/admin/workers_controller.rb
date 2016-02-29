@@ -21,8 +21,10 @@ class Admin::WorkersController < AdminController
     @worker.br_id = @worker.set_br_id
     respond_to do |format|
       if @worker.save
-        format.html { redirect_to admin_worker_path(@worker), notice: 'Worker was successfully created.' }
+        flash[:notice] = 'Worker was successfully created.'
+        format.html { redirect_to admin_worker_path(@worker) }
       else
+        flash[:error] = @worker.errors.full_messages.to_sentence
         format.html { render :new }
       end
     end
@@ -32,8 +34,10 @@ class Admin::WorkersController < AdminController
     params[:worker][:languages].delete('') if params[:worker][:languages].present?
     respond_to do |format|
       if @worker.update(worker_params)
-        format.html { redirect_to admin_worker_path(@worker), notice: 'Worker was successfully updated.' }
+        flash[:notice] = 'Worker was successfully Updated.'
+        format.html { redirect_to admin_worker_path(@worker)}
       else
+        flash[:error] = @worker.errors.full_messages.to_sentence
         format.html { render :edit }
       end
     end

@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
+//= require workers
+
 $(document).ready(function(){
   $("#mobile-menu").on("click",function(){
     $(".mobile-slide-left").animate({"margin-left":"0px"});
