@@ -236,3 +236,14 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
   border-radius: 0px;
   box-shadow: unset;
 }
+.main-page label{
+  color: #333;
+}
+.main-page .footer-bottom{
+  background-color: #3C3D41;
+  padding: 10px;
+}
+.main-page .row{
+  margin-left: 0;
+  margin-right: 0;
+}
