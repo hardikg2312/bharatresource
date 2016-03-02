@@ -169,9 +169,14 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 
 
 /****** Main Site Container *******/
+.user-profile{
+  max-width: 55px;
+  height: auto;
+}
 .main-page{
   color: #333;
-  background-color: #fff;
+  background-color: #fff; 
+  padding-top: 60px;
 }
 .main-page a{
   color: #333;
@@ -181,7 +186,14 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 }
 #main-header{
   background-color: #fff;
+  position: fixed;
   padding: 10px 0px;
+  box-shadow: 0px 3px 5px rgba(0,0,0,.3);
+  height: 60px;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .btn-signup-login{
   background-color: #006990;
@@ -246,4 +258,25 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 .main-page .row{
   margin-left: 0;
   margin-right: 0;
+}
+.search-result-block {
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.search-result-block .profile-desc{
+  padding: 0px 15px;
+}
+.pad-lr-10{
+  padding: 0 10px;
+}
+.font13{
+  font-size: 13px;
+}
+.font15{
+  font-size: 15px;
+}
+.font18{
+  font-size: 18px;
 }
