@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160216160321) do
 
   create_table "regions", force: :cascade do |t|
     t.string   "name"
+    t.string   "name_attr"
     t.integer  "state_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -56,9 +57,12 @@ ActiveRecord::Schema.define(version: 20160216160321) do
     t.text     "address"
     t.string   "email"
     t.string   "mobile_no"
+    t.float    "br_ratings"
     t.string   "proof_docs"
     t.text     "photo_id_proof"
-    t.string   "languages",                                             array: true
+    t.string   "languages_read",                                        array: true
+    t.string   "languages_write",                                       array: true
+    t.string   "languages_speak",                                       array: true
     t.string   "education"
     t.string   "special_course"
     t.text     "college"
@@ -72,6 +76,9 @@ ActiveRecord::Schema.define(version: 20160216160321) do
     t.text     "member_of_any_labor_union", default: "NO"
     t.text     "key_words"
     t.string   "location_of_job"
+    t.string   "ready_to_join"
+    t.string   "willing_to_relocate"
+    t.string   "willing_to_travel"
     t.string   "specialized_skill"
     t.text     "supervisors_reference"
     t.integer  "previous_salary"

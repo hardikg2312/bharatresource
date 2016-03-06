@@ -50,6 +50,6 @@ class Admin::RegionsController < AdminController
     end
 
     def region_params
-      params.require(:region).permit(:name, :state_id)
+      params.require(:region).permit(:name, :name_attr, :state_id)
     end
 end

@@ -27,7 +27,7 @@
             <label class="font12">Select Region</label>
             <select class="form-control" name="worker[region_id]" id="worker_region_id">
               <%= Region.includes(:state).each do |r| %>
-                <option value="<%= r.id %>" state-id="<%= r.state.id %>" ><%= r.name %></option>
+                <option value="<%= r.id %>" <%= 'selected=selected' if @worker.region_id == r.id %> state-id="<%= r.state.id %>"><%= r.name %></option>
               <% end %>
             </select>
           </div>
@@ -39,7 +39,7 @@
             <label class="font12">Select Sub-Industry</label>
             <select class="form-control" name="worker[sub_industry_id]" id="worker_sub_industry_id">
               <%= SubIndustry.includes(:industry).each do |s| %>
-                <option value="<%= s.id %>" industry-id="<%= s.industry.id %>" ><%= s.name %></option>
+                <option value="<%= s.id %>" <%= 'selected=selected' if @worker.sub_industry_id == s.id %> industry-id="<%= s.industry.id %>" ><%= s.name %></option>
               <% end %>
             </select>
           </div>
@@ -65,16 +65,42 @@
             <label class="font12">Mobile Number</label>
             <%= f.text_field :mobile_no, :class => "form-control", :placeholder=>"Mobile Number" %>
           </div>
+
+          <div class="form-group">
+            <label class="font12">BR ratings(Out Of 5)</label>
+            <%= f.text_field :br_ratings, :class => "form-control", :placeholder=>"Br Ratings" %>
+          </div>
+
           <div class="form-group">
             <label class="font12">Proof docs</label>
             <%= f.select :proof_docs, [['PAN Card', 'PAN Card'], ['Passport', 'Passport'],['VoterID', 'VoterID'], ['Adhaar Card', 'Adhaar Card']], {}, {:class=>'form-control'} %>
           </div>
           <div class="form-group">
-            <label class="font12">Language</label>
-            <%= f.select(:languages, [['Hindi', 'Hindi'],
+            <label class="font12">Language Read</label>
+            <%= f.select(:languages_read, [['Hindi', 'Hindi'],
                                     ['Marathi', 'Marathi'],
                                     ['English', 'English']
-                                   ],{ :prompt => "Please select"},
+                                   ],{},
+                                     { :multiple => true, :size => 3, :class=>'form-control'}
+                                   ) %>
+          </div>
+
+          <div class="form-group">
+            <label class="font12">Language Write</label>
+            <%= f.select(:languages_write, [['Hindi', 'Hindi'],
+                                    ['Marathi', 'Marathi'],
+                                    ['English', 'English']
+                                   ],{},
+                                     { :multiple => true, :size => 3, :class=>'form-control'}
+                                   ) %>
+          </div>
+
+          <div class="form-group">
+            <label class="font12">Language Speak</label>
+            <%= f.select(:languages_speak, [['Hindi', 'Hindi'],
+                                    ['Marathi', 'Marathi'],
+                                    ['English', 'English']
+                                   ],{},
                                      { :multiple => true, :size => 3, :class=>'form-control'}
                                    ) %>
           </div>
@@ -128,6 +154,42 @@
             <label class="font12">Member of any labor union </label>
             <%= f.text_area :member_of_any_labor_union, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Member of any labor union" %>
           </div>
+
+          <div class="form-group">
+            <label class="font12">Ready To Join</label>
+            <div>
+              <%= f.radio_button :ready_to_join, '1' %> 
+              <%= label :ready_to_join, 'not looking actively for job' %>
+            </div>
+            <div>
+              <%= f.radio_button :ready_to_join, '2' %>
+              <%= label :ready_to_join, 'need to switch if good offer is made.' %>
+            </div>
+            <div>
+              <%= f.radio_button :ready_to_join, '3' %>
+              <%= label :ready_to_join, 'very actively searching' %>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="font12">Willing to Relocate</label><br>
+              <%= f.radio_button :willing_to_relocate, 'yes' %> 
+              <%= label :willing_to_relocate, 'YES' %>
+              <%= f.radio_button :willing_to_relocate, 'no' %>
+              <%= label :willing_to_relocate, 'NO' %>
+          </div>
+
+          <div class="form-group">
+            <label class="font12">Willing To Travel</label><br>
+              <%= f.radio_button :willing_to_travel, '25' %> 
+              <%= label :willing_to_travel, '25%' %>
+              <%= f.radio_button :willing_to_travel, '50' %>
+              <%= label :willing_to_travel, '50%' %>
+              <%= f.radio_button :willing_to_travel, '75' %>
+              <%= label :willing_to_travel, '75%' %>
+          </div>
+
+
           <div class="form-group">
             <label class="font12">Keywords</label>
             <%= f.text_area :key_words, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Keywords" %>
