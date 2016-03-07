@@ -25,7 +25,7 @@
           </div>
           <div class="form-group">
             <label class="font12">Select Region</label>
-            <select class="form-control" name="worker[region_id]" id="worker_region_id">
+            <select class="form-control" name="worker[region_id]" id="worker_region_id" <%= 'data-region-present=true' if @worker.region_id.present? %>>
               <%= Region.includes(:state).each do |r| %>
                 <option value="<%= r.id %>" <%= 'selected=selected' if @worker.region_id == r.id %> state-id="<%= r.state.id %>"><%= r.name %></option>
               <% end %>
@@ -37,7 +37,7 @@
           </div>
           <div class="form-group">
             <label class="font12">Select Sub-Industry</label>
-            <select class="form-control" name="worker[sub_industry_id]" id="worker_sub_industry_id">
+            <select class="form-control" name="worker[sub_industry_id]" id="worker_sub_industry_id" <%= 'data-subIndustry-present=true' if @worker.sub_industry_id.present? %>>
               <%= SubIndustry.includes(:industry).each do |s| %>
                 <option value="<%= s.id %>" <%= 'selected=selected' if @worker.sub_industry_id == s.id %> industry-id="<%= s.industry.id %>" ><%= s.name %></option>
               <% end %>
@@ -132,7 +132,7 @@
           </div>
           <div class="form-group">
             <label class="font12">Year Of Experience</label>
-            <%= f.text_field :years_of_experience, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Year Of Experience" %>
+            <%= f.select :years_of_experience, [['0-2 Years', '1'], ['2-4 Years', '2'],['4-6 Years', '3'], ['6-8 Years', '4']], {}, {:class=>'form-control'} %>
           </div>
           <div class="form-group">
             <label class="font12">Job Title</label>

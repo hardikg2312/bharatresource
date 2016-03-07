@@ -1,6 +1,9 @@
 var ready = function(){
   var val = $('#worker_state_id').val();
+  var flag = $('#worker_region_id').data('region-present');
   filter_regions(val);
+  if(flag != true)
+    on_change_region(val);
   $('#worker_state_id').on('change', function () {
     var val = this.value;
     filter_regions(val);
@@ -8,7 +11,10 @@ var ready = function(){
   });
 
   var val = $('#worker_industry_id').val();
+  var flag = $('#worker_sub_industry_id').data('subIndustry-present');
   filter_sub_industry(val);
+  if(flag != true)
+    on_change_sub_industry(val);
   $('#worker_industry_id').on('change', function () {
     var val = this.value;
     filter_sub_industry(val);
