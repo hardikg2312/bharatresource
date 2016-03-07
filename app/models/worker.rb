@@ -18,6 +18,11 @@ class Worker < ActiveRecord::Base
   # callbacks
   before_save :check_for_birthdate
 
+  # for image uploading
+  mount_uploader :photo, ImageUploader
+  mount_uploader :photo_id_proof, ImageUploader
+  mount_uploader :address_proof_photo, ImageUploader
+
   def check_for_birthdate
     if dob < Time.now - 14.years
       return true

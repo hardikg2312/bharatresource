@@ -71,3 +71,7 @@ gem 'dalli'
 
 ## Gemfile for Rails 3+, Sinatra, and Merb
 gem 'will_paginate', '~> 3.0.6'
+
+#image uploading on cloudinary using carrierwave
+gem 'carrierwave'
+gem 'cloudinary'

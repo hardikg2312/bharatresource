@@ -1,0 +1,10 @@
+<% @workers.each do |w| %>
+  <div>
+    <%= w.name %>
+    <%= w.br_id %>
+    <%= w.email %>
+    <%= w.mobile_no %>
+    <%= w.br_ratings %>
+    <%= link_to w.name, w %>
+  </div>
+<% end %>
