@@ -1,10 +1,19 @@
 <% @workers.each do |w| %>
   <div>
-    <%= w.name %>
-    <%= w.br_id %>
+    <%= image_tag w.get_profile_photo, :width => "100px" %>
+    <%= w.name %>  <%= w.get_age %>  <%= w.gender %><br>
+    Position: <%= w.job_title %>
+    Total Work Experience: <%= w.years_of_experience %>
+
     <%= w.email %>
     <%= w.mobile_no %>
+
+    Current Location <%= w.location_of_job %>
+    Willing To Relocate <%= w.willing_to_relocate%><br>
+    Willing To Travel <%= w.willing_to_travel %>
     <%= w.br_ratings %>
     <%= link_to w.name, w %>
   </div>
+
+  <br>
 <% end %>

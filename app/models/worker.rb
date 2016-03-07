@@ -36,6 +36,14 @@ class Worker < ActiveRecord::Base
     "BR0#{rand(9999999)}"
   end
 
+  def get_profile_photo
+    photo.to_s
+  end
+
+  def get_age
+    Time.now.year - dob.year
+  end
+
   protected
     def normalize_email
       email.downcase! if email

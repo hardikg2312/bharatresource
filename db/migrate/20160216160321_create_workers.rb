@@ -12,7 +12,9 @@ class CreateWorkers < ActiveRecord::Migration
       t.text :photo
       t.text :address
       t.string :email
+      t.boolean :verified_email, :default => false
       t.string :mobile_no
+      t.boolean :verified_mobile_no, :default => false
       t.float :br_ratings
       t.string :proof_docs
       t.text :photo_id_proof

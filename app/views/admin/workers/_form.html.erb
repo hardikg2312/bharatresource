@@ -67,9 +67,20 @@
             <label class="font12">Email</label>
             <%= f.text_field :email, :class => "form-control", :placeholder=>"Email" %>
           </div>
+
+          <div class="form-group">
+            <label class="font12">Verified Email</label>
+            <%= f.select :verified_email, [['Yes', true], ['No', false]], {}, {:class=>'form-control'} %>
+          </div>
+
           <div class="form-group">
             <label class="font12">Mobile Number</label>
             <%= f.text_field :mobile_no, :class => "form-control", :placeholder=>"Mobile Number" %>
+          </div>
+
+          <div class="form-group">
+            <label class="font12">Verified Mobile No</label>
+            <%= f.select :verified_mobile_no, [['Yes', true], ['No', false]], {}, {:class=>'form-control'} %>
           </div>
 
           <div class="form-group">

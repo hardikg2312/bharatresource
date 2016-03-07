@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 20160216160321) do
   end
 
   create_table "workers", force: :cascade do |t|
-    t.string   "name",                                     null: false
-    t.string   "br_id",                                    null: false
+    t.string   "name",                                      null: false
+    t.string   "br_id",                                     null: false
     t.integer  "state_id"
     t.integer  "region_id"
     t.integer  "industry_id"
@@ -56,13 +56,15 @@ ActiveRecord::Schema.define(version: 20160216160321) do
     t.text     "photo"
     t.text     "address"
     t.string   "email"
+    t.boolean  "verified_email",            default: false
     t.string   "mobile_no"
+    t.boolean  "verified_mobile_no",        default: false
     t.float    "br_ratings"
     t.string   "proof_docs"
     t.text     "photo_id_proof"
-    t.string   "languages_read",                                        array: true
-    t.string   "languages_write",                                       array: true
-    t.string   "languages_speak",                                       array: true
+    t.string   "languages_read",                                         array: true
+    t.string   "languages_write",                                        array: true
+    t.string   "languages_speak",                                        array: true
     t.string   "education"
     t.string   "special_course"
     t.text     "college"
@@ -82,8 +84,8 @@ ActiveRecord::Schema.define(version: 20160216160321) do
     t.string   "specialized_skill"
     t.text     "supervisors_reference"
     t.integer  "previous_salary"
-    t.datetime "created_at",                               null: false
-    t.datetime "updated_at",                               null: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
 
 end
