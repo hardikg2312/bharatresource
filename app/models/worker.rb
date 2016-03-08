@@ -9,7 +9,7 @@ class Worker < ActiveRecord::Base
   #validations
   before_validation :normalize_email
   validates_presence_of :name, :dob, :mobile_no
-  validates_inclusion_of :br_ratings, :in => 0..5
+  validates_inclusion_of :br_ratings, :in => 0..5, :allow_blank => true
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates_length_of :email,    :within => 3..100
   validates_length_of :mobile_no,    :is => 10, :allow_blank => true

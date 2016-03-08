@@ -29,6 +29,7 @@ class CreateWorkers < ActiveRecord::Migration
       t.text :skills
       t.string :current_status
       t.integer :years_of_experience
+      t.string :years_of_experience_in_words
       t.string :job_title
       t.text :job_description
       t.text :member_of_any_labor_union, default: 'NO'

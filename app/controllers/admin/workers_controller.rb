@@ -56,6 +56,6 @@ class Admin::WorkersController < AdminController
     end
 
     def worker_params
-      params.require(:worker).permit(:name, :state_id, :region_id, :industry_id, :sub_industry_id, :dob, :gender, :photo, :address, :email, :verified_email, :mobile_no, :verified_mobile_no, :br_ratings, :proof_docs, :photo_id_proof, :education, :special_course, :college, :address_proof_docs, :address_proof_photo, :skills, :current_status, :years_of_experience, :job_title, :job_description, :member_of_any_labor_union, :key_words, :location_of_job, :ready_to_join, :willing_to_relocate, :willing_to_travel, :specialized_skill, :supervisors_reference, :previous_salary, :languages_read => [], :languages_write => [], :languages_speak => [])
+      params.require(:worker).permit(:name, :state_id, :region_id, :industry_id, :sub_industry_id, :dob, :gender, :photo, :address, :email, :verified_email, :mobile_no, :verified_mobile_no, :br_ratings, :proof_docs, :photo_id_proof, :education, :special_course, :college, :address_proof_docs, :address_proof_photo, :skills, :current_status, :years_of_experience, :years_of_experience_in_words, :job_title, :job_description, :member_of_any_labor_union, :key_words, :location_of_job, :ready_to_join, :willing_to_relocate, :willing_to_travel, :specialized_skill, :supervisors_reference, :previous_salary, :languages_read => [], :languages_write => [], :languages_speak => [])
     end
 end

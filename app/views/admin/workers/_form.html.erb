@@ -65,7 +65,7 @@
           </div>
           <div class="form-group">
             <label class="font12">Email</label>
-            <%= f.text_field :email, :class => "form-control", :placeholder=>"Email" %>
+            <%= f.text_field :email, :required => true, :class => "form-control", :placeholder=>"Email" %>
           </div>
 
           <div class="form-group">
@@ -75,7 +75,7 @@
 
           <div class="form-group">
             <label class="font12">Mobile Number</label>
-            <%= f.text_field :mobile_no, :class => "form-control", :placeholder=>"Mobile Number" %>
+            <%= f.text_field :mobile_no, :required => true, :class => "form-control", :placeholder=>"Mobile Number" %>
           </div>
 
           <div class="form-group">
@@ -100,9 +100,9 @@
 
           <div class="form-group">
             <label class="font12">Language Read</label>
-            <%= f.select(:languages_read, [['Hindi', 'Hindi'],
-                                    ['Marathi', 'Marathi'],
-                                    ['English', 'English']
+            <%= f.select(:languages_read, [['Hindi', 'hindi'],
+                                    ['Marathi', 'marathi'],
+                                    ['English', 'english']
                                    ],{},
                                      { :multiple => true, :size => 3, :class=>'form-control'}
                                    ) %>
@@ -110,9 +110,9 @@
 
           <div class="form-group">
             <label class="font12">Language Write</label>
-            <%= f.select(:languages_write, [['Hindi', 'Hindi'],
-                                    ['Marathi', 'Marathi'],
-                                    ['English', 'English']
+            <%= f.select(:languages_write, [['Hindi', 'hindi'],
+                                    ['Marathi', 'marathi'],
+                                    ['English', 'english']
                                    ],{},
                                      { :multiple => true, :size => 3, :class=>'form-control'}
                                    ) %>
@@ -120,9 +120,9 @@
 
           <div class="form-group">
             <label class="font12">Language Speak</label>
-            <%= f.select(:languages_speak, [['Hindi', 'Hindi'],
-                                    ['Marathi', 'Marathi'],
-                                    ['English', 'English']
+            <%= f.select(:languages_speak, [['Hindi', 'hindi'],
+                                    ['Marathi', 'marathi'],
+                                    ['English', 'english']
                                    ],{},
                                      { :multiple => true, :size => 3, :class=>'form-control'}
                                    ) %>
@@ -153,27 +153,31 @@
 
           <div class="form-group">
             <label class="font12">Skills</label>
-            <%= f.text_field :skills, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Skills" %>
+            <%= f.text_field :skills, :class => 'form-control', :placeholder=>"Skills" %>
           </div>
           <div class="form-group">
             <label class="font12">Current Status</label>
-            <%= f.text_field :current_status, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Current Status" %>
+            <%= f.text_field :current_status, :class => 'form-control', :placeholder=>"Current Status" %>
           </div>
           <div class="form-group">
             <label class="font12">Year Of Experience</label>
             <%= f.select :years_of_experience, [['0-2 Years', 1], ['2-4 Years', 2],['4-6 Years', 3], ['6-8 Years', 4]], {}, {:class=>'form-control'} %>
           </div>
           <div class="form-group">
+            <label class="font12">Years Of Experience In Words</label>
+            <%= f.text_field :years_of_experience_in_words, :class => 'form-control', :placeholder=>"Years Of Experience In Words" %>
+          </div>
+          <div class="form-group">
             <label class="font12">Job Title</label>
-            <%= f.text_field :job_title, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Job Title" %>
+            <%= f.text_field :job_title, :class => 'form-control', :placeholder=>"Job Title" %>
           </div>
           <div class="form-group">
             <label class="font12">Job Location</label>
-            <%= f.text_field :location_of_job, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Job Location" %>
+            <%= f.text_field :location_of_job, :class => 'form-control', :placeholder=>"Job Location" %>
           </div>
           <div class="form-group">
             <label class="font12">Specialized Skills</label>
-            <%= f.text_field :specialized_skill, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Specialized Skills" %>
+            <%= f.text_field :specialized_skill, :class => 'form-control', :placeholder=>"Specialized Skills" %>
           </div>
           <div class="form-group">
             <label class="font12">Job Description</label>
@@ -225,7 +229,7 @@
           </div>
           <div class="form-group">
             <label class="font12">Previous Salary</label>
-            <%= f.text_field :previous_salary, :rows => 4, :cols => 100, :class => 'form-control', :placeholder=>"Previous Salary" %>
+            <%= f.text_field :previous_salary, :class => 'form-control', :placeholder=>"Previous Salary" %>
           </div>
           <div class="form-group">
             <label class="font12">Supervisors Reference</label>
