@@ -6,7 +6,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="row main-page"> 
+  <body class="main-page"> 
     <div class="header" id="main-header">
       <div class="container">
         <div class="col-sm-3 col-md-4 col-lg-6 col-xl-5">
@@ -41,6 +41,11 @@
         <div class="">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor Sed bibendum varius euismod. Integer eget turpis sit amet lorem rutrum ullamcorper sed sed dui. vestibulum odio at elementum. Suspendisse et condimentum nibh
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container">
+        <%= yield %>
       </div>
     </div>
     <div aria-hidden="true" aria-labelledby="myLargeModalLabel" role="dialog" tabindex="-1" id="login" class="modal fade" style="display: none;">
@@ -168,6 +173,10 @@
         </div>
       </div>
     </div>
-    <%= yield %>
+    <div class="footer-bottom text-center color-white">
+      <div class="container">
+        <p> &copy; 2016 Bharatsource. All Rights Reserved </p>        
+      </div>
+    </div>
   </body>
 </html>
