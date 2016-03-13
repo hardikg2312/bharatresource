@@ -41,6 +41,9 @@ a, a:focus, a:active, a:hover{
 .pad0{
   padding: 0;
 }
+.pad5{
+  padding: 5px;
+}
 .pad10{
   padding: 10px;
 }
@@ -49,6 +52,9 @@ a, a:focus, a:active, a:hover{
 }
 .pad20{
   padding: 20px;
+}
+.pad-tb5{
+  padding: 5px 0px;
 }
 .margin0{
   margin: 0; 
@@ -170,8 +176,25 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 
 /****** Main Site Container *******/
 .user-profile{
-  max-width: 55px;
-  height: auto;
+  height: 85px;
+  width: 105px;
+  border: 1px solid #ccc;
+}
+.user-profile2{
+  height: 85px;
+  width: 105px;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.user-profile-container{
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  height: 100px;
+  width: 120px;
 }
 .main-page{
   color: #333;
@@ -209,7 +232,7 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 }
 #main-header .right-menu{
   list-style-type: none;
-  float: left;
+  float: right;
   margin-top: 7px
 }
 #main-header .right-menu li{
@@ -281,4 +304,19 @@ ul.main-navigation-menu > li.open , ul.main-navigation-menu > li,{
 }
 .font18{
   font-size: 18px;
+}
+.brd-bottom{
+  border-bottom: 1px solid #ccc;
+}
+.bold{
+  font-weight: bold;
+}
+.brd{
+  border: 1px solid #ccc;
+}
+.gt10{
+  margin-top: 10px;
+}
+.hover-bg:hover{
+  background-color: #F4F6F9;
 }
