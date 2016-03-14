@@ -1,0 +1,85 @@
+<div class="search-result-block gb20">
+  <div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 pad0">
+      <div class="font25 gb10">Basic Info</div>
+      <div class="clearfix brd-bottom pad-tb5 hover-bg">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 pad0">
+          Name: 
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
+          <%= @worker.name %>
+        </div>
+      </div>
+      <div class="clearfix brd-bottom pad-tb5 hover-bg">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 pad0">
+          Email Id: 
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
+          <%= @worker.email %>
+        </div>
+      </div>
+      <div class="clearfix brd-bottom pad-tb5 hover-bg">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 pad0">
+          Age: 
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
+          <%= @worker.get_age %> - <%= @worker.gender %>
+        </div>
+      </div>
+      <div class="clearfix brd-bottom pad-tb5 hover-bg">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 pad0">
+          DOB: 
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
+          <%= @worker.dob %>
+        </div>
+      </div>
+      <div class="clearfix pad-tb5 hover-bg">
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 pad0">
+          Address: 
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
+          <%= @worker.address %>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pad0">
+      <div class="right">
+        <%= image_tag @worker.get_profile_photo, :class => "user-profile2" %>
+        <div class="brd center">
+          Rating <%= @worker.br_ratings %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix gt10">
+    <div class="pad-tb5">
+      Language: 
+    </div>
+    <table class="table table-bordered font13">
+      <tbody>
+        <tr>
+          <td>languages</td><td>Hindi</td><td>Marathi</td><td>English</td>
+        </tr>
+        <tr>
+          <td>Read</td>
+          <td><%= @worker.languages_read.include?('hindi') ? 'Yes' : 'No' %></td>
+          <td><%= @worker.languages_read.include?('marathi') ? 'Yes' : 'No' %></td>
+          <td><%= @worker.languages_read.include?('english') ? 'Yes' : 'No' %></td>
+        </tr>
+        <tr>
+          <td>Write</td>
+          <td><%= @worker.languages_write.include?('hindi') ? 'Yes' : 'No' %></td>
+          <td><%= @worker.languages_write.include?('marathi') ? 'Yes' : 'No' %></td>
+          <td><%= @worker.languages_write.include?('english') ? 'Yes' : 'No' %></td>
+        </tr>
+        <tr>
+          <td>Speak</td>
+          <td><%= @worker.languages_speak.include?('hindi') ? 'Yes' : 'No' %></td>
+          <td><%= @worker.languages_speak.include?('marathi') ? 'Yes' : 'No' %></td>
+          <td><%= @worker.languages_speak.include?('english') ? 'Yes' : 'No' %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
