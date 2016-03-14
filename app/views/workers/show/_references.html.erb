@@ -8,7 +8,7 @@
             Mobile: 
           </div>
           <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-            +91-8149944697
+            <%= @worker.mobile_no %>
           </div>
         </div>
         <div class="clearfix brd-bottom pad-tb5 hover-bg">
@@ -16,7 +16,7 @@
             Email Id: 
           </div>
           <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-            mr.akashbijwe@gmail.com
+            <%= @worker.email %>
           </div>
         </div>
         <div class="clearfix pad-tb5 hover-bg">
@@ -24,7 +24,7 @@
             Id Proof: 
           </div>
           <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-            Aadhar Card
+            <%= @worker.proof_docs %>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
             Name: 
           </div>
           <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-            Pratik Sawarkar
+            <%= @worker.references && @worker.references[0] && @worker.references[0].name %>
           </div>
         </div>
         <div class="clearfix pad-tb5 hover-bg">
@@ -45,7 +45,7 @@
             Mobile: 
           </div>
           <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-            +91 - 8148899877
+            <%= @worker.references && @worker.references[0] && @worker.references[0].mobile_no %>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@
             Name: 
           </div>
           <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-          Akash Bijwe
+            <%= @worker.references && @worker.references[1] && @worker.references[1].name %>
           </div>
         </div>
         <div class="clearfix pad-tb5 hover-bg">
@@ -66,7 +66,7 @@
             Mobile: 
           </div>
           <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-            +91 - 8148899877
+            <%= @worker.references && @worker.references[1] && @worker.references[1].mobile_no %>
           </div>
         </div>
       </div>

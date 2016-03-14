@@ -1,0 +1,36 @@
+<div class="bg-white pad15 font25">
+  All / Edit References
+</div>
+<div class="pad15">
+  <div class="breadcrumb">
+    Home / All Workers / Add New References
+  </div>
+
+  <div class="panel panel-white">
+    <div class="panel-heading clearfix">
+      <div class="panel-title">
+        Add New References
+      </div>
+    </div>
+    <div class="panel-body clearfix">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="form-group">
+          <%= f.text_field :name, :required => true, :class => "form-control", :placeholder=>"Name" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :mobile_no, :required => true, :class => "form-control", :placeholder=>"Mobile" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :email, :class => "form-control", :placeholder=>"Email" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit "Save", :class => "btn btn-primary" %>
+          <%= link_to admin_worker_references_path(@worker) do %>
+            <span class ="btn btn-warning">Cancel</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

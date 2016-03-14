@@ -30,6 +30,7 @@
                 <td><%= worker.name %></td>
                 <td><%= worker.br_id %></td>
                 <td>
+                  <%= link_to 'References', admin_worker_references_path(worker), :class => "label label-sm label-warning" %>
                   <%= link_to 'Show', admin_worker_path(worker), :class => "label label-sm label-success" %>
                   <%= link_to 'Edit', edit_admin_worker_path(worker), :class => "label label-sm label-warning" %>
                   <%= link_to 'Destroy', admin_worker_path(worker), :class => "label label-sm label-danger", method: :delete, data: { confirm: 'Are you sure?' } %>

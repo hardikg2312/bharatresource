@@ -5,6 +5,7 @@ class Worker < ActiveRecord::Base
   belongs_to :region
   belongs_to :industry
   belongs_to :sub_industry
+  has_many :references
 
   #validations
   before_validation :normalize_email
