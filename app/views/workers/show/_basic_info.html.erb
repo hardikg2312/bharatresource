@@ -31,7 +31,7 @@
           DOB: 
         </div>
         <div class="col-xs-6 col-sm-6 col-md-9 col-lg-9 pad0">
-          <%= @worker.dob %>
+          <%= @worker.dob.strftime("%d/%m/%Y") %>
         </div>
       </div>
       <div class="clearfix pad-tb5 hover-bg">

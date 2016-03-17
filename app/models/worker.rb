@@ -41,8 +41,27 @@ class Worker < ActiveRecord::Base
     photo.to_s
   end
 
+  def get_photo_id_proof
+    photo_id_proof.to_s
+  end
+
+  def get_address_proof_photo
+    address_proof_photo.to_s
+  end
+
   def get_age
     Time.now.year - dob.year
+  end
+
+  def get_ready_to_join
+    case ready_to_join
+    when '1'
+      'Not looking actively for job'
+    when '2'
+      'Need to switch if good offer is made.'
+    when '3'
+      'Very actively searching'
+    end
   end
 
   protected

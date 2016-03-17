@@ -22,6 +22,18 @@
           <strong>BRID:</strong>
           <%= @worker.br_id %>
         </div>
+        <div class="gb10">
+          <strong>Photo</strong>
+          <%= link_to 'link', @worker.get_profile_photo, :target => "_blank", :style => "color:blue" %>
+        </div>
+        <div class="gb10">
+          <strong>Photo ID Proof</strong>
+          <%= link_to 'link', @worker.get_photo_id_proof, :target => "_blank", :style => "color:blue" %>
+        </div>
+        <div class="gb10">
+          <strong>Address Proof Photo</strong>
+          <%= link_to 'link', @worker.get_address_proof_photo, :target => "_blank", :style => "color:blue" %>
+        </div>
         <div class="form-group">
           <%= link_to 'Edit', edit_admin_worker_path(@worker), :class=>"btn btn-warning gutter-right10" %> 
           <%= link_to 'Back', admin_workers_path, :class=>"btn btn-default" %>
