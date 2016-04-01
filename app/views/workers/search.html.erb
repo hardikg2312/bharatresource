@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pad-tb-20">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
       <h2 class="color-yellow font25">Search</h2>          
       <div class="panel-body clearfix">
@@ -36,11 +36,22 @@
             <label class="font12">Year Of Experienceform-control</label>
             <%= select_tag :years_of_experience, options_for_select([['0-2 years', 1], ['2-10 years', 2], ['10+ years', 3]]), {:class => "form-control no-shadow no-border-radius", :style => ""} %>
           </div>
-          <div class="form-group">
-            <%= submit_tag("Search") %>
+          <div class="form-group right">
+            <%= submit_tag "SEARCH", class: "search_btn" %>
           </div>
         <% end %>
       </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 home_page_right_container">
+      <p class="color-yellow font25">
+        ARE YOU A SKILLED WORKER ???
+      </p>
+      <p>
+        CREATE YOUR ONLINE PROFILE ON <%= link_to "BHARATRESOURCE.COM", root_path, :style=>"color: #88bbc8;" %>.
+      </p>
+      <p>
+        GIVE A MISS CALL ON 075060 17782
+      </p>
     </div>
   </div>
 </div>
