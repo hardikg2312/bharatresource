@@ -24,4 +24,11 @@ $(document).ready(function(){
   $("#mobile-close-btn").on("click",function(){
     $(".mobile-slide-left").animate({"margin-left":"-260px"});
   });
+
+  $('.top_scroll_js').click(function(){
+    $('html, body').animate({
+        scrollTop: $('#info').offset().top
+    }, 800);
+  });
+
 });
