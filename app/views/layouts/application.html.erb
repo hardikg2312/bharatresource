@@ -1,71 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bharatresource</title>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-    <link href="<%= asset_path('logo.png') %>" rel="shortcut icon"></link>
+    <%= render 'layouts/meta' %>
   </head>
   <body class="main-page"> 
-    <div class="header" id="main-header">
-      <div class="container">
-        <div class="col-sm-12 col-md-4 col-lg-6 col-xl-5 logo_container">
-          <%= link_to image_tag('logo.png', :width => '50px'), root_path %>
-          <%= link_to "Bharatresource.com", root_path %>
-        </div>
-        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6">
-          <ul class="right-menu">
-            <li>
-              <a href="#info" class="top_scroll_js">About</a>
-            </li>
-            <li>
-              <a href="#info" class="top_scroll_js">Plans</a>
-            </li>
-            <li>
-              <a href="#info" class="top_scroll_js">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <%= render 'layouts/header' %>
     <div class="row ">
       <%= yield %>
     </div>
-    <div class="footer-top" id="info">
-      <div class="container">
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-          <h4 class="footer-head">About Us</h4>
-          <p>
-            Its an online platform for skilled workers where Employer can search workers from any where in india and for any kind of industry.
-          </p>
-          <p>
-             Its an platform for skilled workers which helps employer find the right talent and helps labors mark their digital presence.
-          </p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-          <h4 class="footer-head">Plans</h4>
-          <p>
-            Our site is free as of now.
-          </p>
-          <p>
-            To know more about our plans, write to us at <%= link_to "contact@bharatresource.com", "mailto:contact@bharatresource.com", :style=>"color: #0078B5;" %>
-          </p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
-          <h4 class="footer-head">Contact Us</h4>
-          <p>
-            Write to us at <%= link_to "contact@bharatresource.com", "mailto:contact@bharatresource.com", :style=>"color: #0078B5;" %><br>
-            Give a call at: 075060 17782
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom text-center color-white">
-      <div class="container pos-relative">        
-        <%= link_to image_tag('logo.png', :width => '50px'), root_path, :class=>"footer-logo" %>
-        <p style="margin-top: 10px;"> &copy; 2016 Bharatresource. All Rights Reserved </p>
-      </div>
-    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
