@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'workers#search'
 
+  get 'services', to: 'info#services', as: 'services'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

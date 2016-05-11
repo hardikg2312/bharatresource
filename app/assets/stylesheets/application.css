@@ -53,6 +53,9 @@ a, a:focus, a:active, a:hover{
 .pad20{
   padding: 20px;
 }
+.pad40{
+  padding: 40px;
+}
 .pad-tb5{
   padding: 5px 0px;
 }
@@ -68,9 +71,8 @@ a, a:focus, a:active, a:hover{
 .gb20{
   margin-bottom: 20px;
 }
-.font12{
-  font-size: 12px;
-}
+.font12{font-size: 12px;}
+.font14{font-size: 14px;}
 .font25{
   font-size: 25px;
 }

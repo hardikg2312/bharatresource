@@ -5,12 +5,12 @@
       <div class="panel-body clearfix">
         <%= form_tag("/workers", method: "get") do %>
           <div class="form-group">
-            <label class="font12">Select State</label>
+            <label class="font14">Select State</label>
             <%= select_tag :state_id, options_from_collection_for_select(State.all, :id, :name), {:id => 'worker_state_id', :class => "form-control no-shadow no-border-radius", :style => ""} %>
           </div>
 
           <div class="form-group">
-            <label class="font12">Select Region</label>
+            <label class="font14">Select Region</label>
             <select class="form-control no-shadow no-border-radius" name="region_id" id="worker_region_id">
               <%= Region.includes(:state).each do |r| %>
                 <option value="<%= r.id %>" state-id="<%= r.state.id %>"><%= r.name %></option>
@@ -19,12 +19,12 @@
           </div>
 
           <div class="form-group">
-            <label class="font12">Select Industry</label>
+            <label class="font14">Select Industry</label>
             <%= select_tag :industry_id, options_from_collection_for_select(Industry.all, :id, :name), {:id => 'worker_industry_id', :class => "form-control no-shadow no-border-radius", :style => ""} %>
           </div>
 
           <div class="form-group">
-            <label class="font12">Select Sub-Industry</label>
+            <label class="font14">Select Sub-Industry</label>
             <select class="form-control no-shadow no-border-radius" name="sub_industry_id" id="worker_sub_industry_id">
               <%= SubIndustry.includes(:industry).each do |s| %>
                 <option value="<%= s.id %>" industry-id="<%= s.industry.id %>" ><%= s.name %></option>
@@ -33,7 +33,7 @@
           </div>
 
           <div class="form-group">
-            <label class="font12">Year Of Experienceform-control</label>
+            <label class="font14">Year Of Experience</label>
             <%= select_tag :years_of_experience, options_for_select([['0-2 years', 1], ['2-10 years', 2], ['10+ years', 3]]), {:class => "form-control no-shadow no-border-radius", :style => ""} %>
           </div>
           <div class="form-group right">
